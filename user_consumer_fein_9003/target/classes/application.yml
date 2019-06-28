@@ -1,0 +1,8 @@
+server:
+  port: 9003
+eureka:
+  client:
+    registerWithEureka: false #不在注册中心显示
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka-7001.com:7001/eureka,http://eureka-7002.com:7002/eureka

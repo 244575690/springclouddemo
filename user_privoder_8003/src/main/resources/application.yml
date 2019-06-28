@@ -1,0 +1,24 @@
+server:
+  port: 8003
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo
+    username: root
+    password: root
+  application:
+    name: USER-PROVIDER #不要使用下划线
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka #告诉服务提供者要把服务注册到哪儿
+      #defaultZone: http://eureka-7001.com:7001/eureka,http://eureka-7002.com:7002/eureka #告诉服务提供者要把服务注册到哪儿
+  instance:
+    prefer-ip-address: true #显示客户端真实ip
+#logging:
+#  level:
+#    root: warn
+#    com:
+#      springcloud:
+#        mapper: debug
+
